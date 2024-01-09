@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>MMA Gym</title>
+    <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+
+      .container {
+          width: 80%;
+          margin: 0 auto;
+      }
+
+      header {
+          background-color: #333;
+          color: #fff;
+          padding: 1em 0;
+      }
+
+      header h1 {
+          margin: 0;
+      }
+
+      nav ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+      }
+
+      nav li {
+          margin-right: 20px;
+      }
+
+      nav a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+          font-size: 1.2em;
+      }
+
+      /* Responsive styles for smaller screens */
+      @media only screen and (max-width: 600px) {
+          header {
+              text-align: center;
+          }
+
+          nav {
+              margin-top: 10px;
+          }
+
+          nav ul {
+              flex-direction: column;
+              align-items: center;
+          }
+
+          nav li {
+              margin: 10px 0;
+          }
+      }
+      main {
+          padding: 2em 0;
+      }
+
+      section {
+          margin-bottom: 40px;
+      }
+
+      section h2 {
+          color: #333;
+      }
+
+      section p {
+          color: #555;
+      }
+
+      section ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      section ul li {
+          margin-bottom: 10px;
+          color: #333;
+      }
+      /* ... (previous CSS code) ... */
+
+      section#fighters {
+          background-color: #fff;
+          padding: 2em 0;
+      }
+
+      .fighter-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+      }
+
+      .fighter-card {
+          width: 300px;
+          margin-bottom: 20px;
+          padding: 15px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .fighter-card h3 {
+          color: #333;
+      }
+
+      .fighter-card p {
+          color: #555;
+      }
+      /* ... (remaining CSS code) ... */
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>MMA Gym</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+  <main>
+  <section id="home">
+      <div class="container">
+          <h2>Welcome to Our MMA Gym</h2>
+          <p>Train with the best to become the best. Join our MMA gym for a transformative experience in martial arts.</p>
+      </div>
+  </section>
+
+  <section id="about">
+      <div class="container">
+          <h2>About Us</h2>
+          <p>Our gym is dedicated to providing top-notch training in various mixed martial arts disciplines. With experienced instructors and state-of-the-art facilities, we are committed to helping our members reach their fitness and martial arts goals.</p>
+      </div>
+  </section>
+
+  <section id="classes">
+      <div class="container">
+          <h2>Classes</h2>
+          <p>Explore our diverse range of classes, suitable for all skill levels:</p>
+          <ul>
+              <li>Brazilian Jiu-Jitsu</li>
+              <li>Muay Thai</li>
+              <li>Boxing</li>
+              <!-- Add more classes as needed -->
+          </ul>
+      </div>
+  </section>
+  
+
+    
+        <section id="fighters">
+            <div class="container">
+                <h2>Fighters</h2>
+                <div class="fighter-list">
+                    <!-- Python code will generate the fighter cards here -->
+                  <p>
+                    {%for fighter in fighters%}
+                     <div>
+                       <h4>{{fighter['name']}}</h4>
+                       <div>
+                       <h4><br>weight </br>{{fighter['weight']}} </h4>
+                       </div>
+                        <div>
+                        <h4><br>Age </br>{{fighter['age']}} </h4>
+                        </div>
+                        <div>
+                        <h4><br>Technique </br>{{fighter['technique']}} </h4>
+                        </div>
+                     </div>
+                    
+                    {% endfor %}
+                  </p>
+                  
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>
